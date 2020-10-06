@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+
+        android:title="@string/bottom_home"
+        android:icon="@drawable/ic_bottom_home"/>
+    <item
+        android:id="@+id/action_task"
+        android:icon="@drawable/menu_payment"
+        android:title="@string/bottom_task"
+         />
+    <item
+        android:id="@+id/action_earning"
+
+        android:title="@string/bottom_earning"
+        android:icon="@drawable/accepted_active"/>
+</menu>

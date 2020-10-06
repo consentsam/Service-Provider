@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#144789</color>
+    <color name="colorAccent">#144789</color>
+    <color name="colorBlack">#0E0D0D</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="EditTextLabelColor">#144789</color>
+    <color name="colorMain">#144789</color>
+    <color name="colorCheckBox">#7F7F7F</color>
+<color name="redText">#F6584C</color>
+    <color name="brown">#231413</color>
+    <color name="yellow">#A17F18</color>
+    <color name="pink">#F6584C</color>
+    <color name="green">#03D8C4</color>
+    <color name="blue">#4A5CBD</color>
+    <color name="color_text">#363636</color>
+    <color name="switch_on">#02B509</color>
+    <color name="ratingcolor">#F89F1B</color>
+    <color name="green_color">#00B04F</color>
+    <color name="hint_color">#7F7F7F</color>
+    <color name="back_color">#E3E3E3</color>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/onlineFragment">
+    <fragment
+        android:id="@+id/onlineFragment"
+
+        android:label="online_fragment"
+        tools:layout="@layout/online_dashboard_fragment">
+
+        <action
+            android:id="@+id/action_offline"
+            app:destination="@id/offlineFragment"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/offlineFragment"
+
+
+        tools:layout="@layout/ofline_dashboard_fragment">
+
+        <action
+            android:id="@+id/action_online"
+            app:destination="@id/onlineFragment"
+
+            />
+    </fragment>
+</navigation>

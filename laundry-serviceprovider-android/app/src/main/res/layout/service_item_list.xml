@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_gravity="center|top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+<ImageView
+    android:id="@+id/iv_itemImage"
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:src="@drawable/home_active"
+    android:layout_marginRight="@dimen/_10sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+   />
+
+        <TextView
+            android:id="@+id/tv_itemName"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Dummy"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+          android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/iv_itemImage"
+            />
+
+        <TextView
+            android:id="@+id/tv_itemCategory"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Dummy"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_itemName"
+            />
+        <TextView
+            android:id="@+id/tv_itemPrice"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="SAR 20"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_itemCategory"
+            />
+        <ImageView
+            android:id="@+id/iv_itemEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_itemPrice"
+            />
+        <ImageView
+            android:id="@+id/iv_itemDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_icon"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/iv_itemEdit"
+            />
+        <ImageView
+            android:id="@+id/iv_itemOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_thumb"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toEndOf="@+id/iv_itemDelete"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

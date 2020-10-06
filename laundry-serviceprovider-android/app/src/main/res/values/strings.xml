@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">Makwage Service Provider</string>
+    <string name="please_enter">Please enter</string>
+    <string name="please_select">Please select</string>
+    <string name="check_internet_availability">Unable to Connect to the Internet. Please Check Internet Connectivity</string>
+    <string name="exit_from_app_message">Press again to close laundry</string>
+    <string name="select_theme_code">Select Theme Mode</string>
+    <string name="dark_mode_default_theme">Dark Mode (Default Theme)</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="english">English</string>
+    <string name="arabic">اَلْعَرَبِيَّةُ‎</string>
+    <string name="select_language">Select Language</string>
+    <string name="proceed">Proceed</string>
+    <string name="register">Register</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="country">Country</string>
+    <string name="password">Password</string>
+    <string name="accept_terms_conditions"><![CDATA[Accept Terms & Conditions]]></string>
+    <string name="already_have_an_account">Already have an account? Login</string>
+    <string name="password_instruction">Password must contain at least 1 Alphabet, 1 Number and 1 Special Character</string>
+    <string name="city">City</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_send_message">OTP has been sent to you on your mobile number. Please enter it below</string>
+    <string name="don_t_receive_the_otp">Don\'t receive the OTP?</string>
+    <string name="don_t_receive_the_otp_resend_otp">Don\'t receive the OTP? Resend OTP</string>
+    <string name="verify">Verify</string>
+    <string name="thanks_for_registrering">Thanks for Registering with us.</string>
+    <string name="time_for_verification">We need 24-48 hours to verify your details . Once we are done with that,you will receive an email and text message on your registered email id and mobile number as well</string>
+    <string name="profile_create">Profile Creation</string>
+    <string name="name">Name</string>
+    <string name="laundry_name">Laundary Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="laundry_address">Laundry Address</string>
+    <string name="laundry_contact_no">Laundry Contact Number</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="bank_detail">Bank Detail</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="bank_acc_no">Bank Account Number</string>
+    <string name="acc_holder_name">Account Holder Name</string>
+    <string name="iban_code">IBAN Code</string>
+    <string name="continue_">Continue</string>
+    <string name="manage_document">Manage Document</string>
+    <string name="municipality_license">Municipality License</string>
+    <string name="tax_registration_no">Tax Registration Number</string>
+    <string name="other_document">Other Document</string>
+    <string name="address_proof">Address Proof</string>
+    <string name="commercial_registration">Commercial Registration</string>
+    <string name="proceed_">Proceed</string>
+    <string name="skip">Skip</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="continue1">Continue</string>
+    <string name="sign_up_not_done">Don’t have an account? SIGN UP</string>
+    <string name="forgot_password_no_q_mark">Forgot Password</string>
+    <string name="please_enter_mobile_number">Please enter the Mobile Number</string>
+    <string name="please_enter_value">Please enter the Input</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="submit">Submit</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_message">Enter Following details to reset your password</string>
+    <string name="new_password">New Password</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="home_message">Work Under Progress</string>
+    <string name="delivery_sevice">Do you provide delivery services</string>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">very_strong</string>
+    <!--Error-->
+    <string name="your_feedback">Please enter your feedback</string>
+    <string name="error_otp">Please enter Otp</string>
+    <string name="Otp_resend_successfully">OTP resent successfully</string>
+    <string name="error_name">Please enter user Name</string>
+    <string name="error_email">Please enter Email</string>
+    <string name="error_mobile_number">Please enter mobile Number</string>
+    <string name="error_invalid_mobile_number">Please enter valid mobile number</string>
+    <string name="error_invalid_email">Please enter valid email id</string>
+    <string name="error_password">Please enter password</string>
+    <string name="error_new_password">Please enter new password</string>
+    <string name="error_invalid_password"> Password should be at least 8 characters long</string>
+    <string name="error_confirm_password">Please the confirm password</string>
+    <string name="error_password_match">Confirm password does not match</string>
+    <string name="error_reset_password_match">New password and confirm password does not match</string>
+    <string name="error_valid_mobile">Please enter valid mobile number</string>
+    <string name="error_signup_password_match">Password and confirm password does not match</string>
+    <string name="set_time_collection">Set Time Slot for Collection</string>
+    <string name="set_time_delivery">Set Time Slot For Delivery</string>
+    <string name="yourself_unavailable">Make Yourself Unavailable</string>
+    <string name="time_slot_collection">Time slot for collection for 12 May</string>
+    <string name="time_slot_delivery">Time slot for delivery for 12 May</string>
+    <string name="pick_up_date">Select Date</string>
+    <string-array name="country_name">
+        <item> Country</item>
+
+        <item> Saudi Arabia</item>
+
+    </string-array>
+    <string-array name="city_name">
+        <item> City</item>
+        <item> Riyadh</item>
+        <item> Jeddah</item>
+        <item> Makkah</item>
+        <item>Madina</item>
+        <item> Dammam</item>
+        <item>Dhahran</item>
+        <item>AlKhobar</item>
+    </string-array>
+
+    <string-array name="status">
+        <item> Status</item>
+        <item> Pickup</item>
+        <item> In Progress</item>
+        <item> Packed</item>
+        <item>Dispatched</item>
+
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_ORM">Order Request Management</string>
+    <string name="menu_service_man">Service Management</string>
+    <string name="menu_payment_man">Payment Management</string>
+    <string name="menu_CNDM">Collection and Delivery Management</string>
+    <string name="menu_SDM">Service Discount Management</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_signout">Sign Out</string>
+
+    <string name="bottom_home">Home</string>
+    <string name="bottom_task">Task</string>
+    <string name="bottom_earning">Earning</string>
+    //error
+    <string name="error_internet">Please check your internet connection</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    //dashboard
+    <string name="no_order_request">No Order Request</string>
+    <string name="order_request">Go on duty to receive order request</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="items_bottom">
+        <item>Dummy Item</item>
+    </string-array>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/app_bg"
+    tools:context=".ui.activity.profile.ProfileCreateActivity">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/profile_create"
+                    android:textColor="@color/colorMain"
+                    android:textSize="@dimen/_16sdp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profle_crtn"
+                        app:civ_border_width="@dimen/_1sdp"
+                        app:civ_border_color="@color/colorMain"
+                        app:civ_circle_background_color="@color/colorWhite"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                  <!--  <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_upload"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/icon_camera"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_profile_new_address"
+                        app:layout_constraintEnd_toEndOf="@+id/img_profile_new_address" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:id="@+id/et_laundry_name"
+                    style="@style/EditBoxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/laundry_name"
+
+
+                    android:textCursorDrawable="@null" />
+                <EditText
+                    android:id="@+id/et_owner_name"
+                    style="@style/EditBoxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/owner_name"
+
+
+                    android:textCursorDrawable="@null" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    style="@style/EditBoxStyle">
+                    <TextView
+                        android:id="@+id/tv_countrycode_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="+966 "
+
+                        android:textSize="@dimen/_14sdp"
+                        android:textCursorDrawable="@null"/>
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorCheckBox"/>
+                    <EditText
+                        android:id="@+id/et_mobile_number_profile"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_number"
+
+                        android:inputType="number"
+                        android:textColorHint="@color/colorCheckBox"
+                        android:textColor="@color/colorBlack"
+
+                        android:paddingStart="@dimen/_11sdp"
+                        android:maxLength="9"
+                        android:textSize="@dimen/_14sdp"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_email_profile"
+                    style="@style/EditBoxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+
+
+                    android:textCursorDrawable="@null" />
+                <EditText
+                    android:id="@+id/et_laundry_address"
+                    style="@style/EditBoxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/laundry_address"
+
+
+                    android:textCursorDrawable="@null" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    style="@style/EditBoxStyle">
+                    <TextView
+                        android:id="@+id/tv_countrycode_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="+966 "
+
+                        android:textSize="@dimen/_14sdp"
+                        android:textCursorDrawable="@null"/>
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorCheckBox"/>
+                    <EditText
+                        android:id="@+id/et_laundry_contact_number"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/laundry_contact_no"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textColorHint="@color/colorCheckBox"
+                        android:textColor="@color/colorBlack"
+
+                        android:paddingStart="@dimen/_11sdp"
+
+                        android:textSize="@dimen/_14sdp"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/upload_document_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_rect"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_16sdp"
+                    android:textAllCaps="true"
+                    android:text="@string/upload_document"/>
+
+            </LinearLayout>
+        </ScrollView>
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true">-->
+<!--        <include layout="@layout/default_bottom_line_view"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+</LinearLayout>

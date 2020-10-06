@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/menu_dashboard"
+            android:title="@string/menu_dashboard"
+            />
+        <item
+            android:id="@+id/nav_service_mgmt"
+            android:icon="@drawable/menu_servive"
+            android:title="@string/menu_service_man" />
+        <item
+            android:id="@+id/nav_orm"
+            android:icon="@drawable/menu_payment"
+            android:title="@string/menu_ORM" />
+        <item
+            android:id="@+id/nav_payment_management"
+            android:icon="@drawable/menu_payment"
+            android:title="@string/menu_payment_man" />
+        <item
+            android:id="@+id/nav_CAMS"
+            android:icon="@drawable/mrnu_delivery"
+            android:title="@string/menu_CNDM" />
+        <item
+            android:id="@+id/nav_SDM"
+            android:icon="@drawable/menu_service"
+            android:title="@string/menu_SDM" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/menu_setting"
+            android:title="@string/menu_setting" />
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/menu_logout"
+            android:title="@string/menu_signout" />
+    </group>
+</menu>

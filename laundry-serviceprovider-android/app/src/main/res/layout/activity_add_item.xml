@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.service_mgmt.AddItemActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_addItem_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:background="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            android:text="Add Item"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_toolbar"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_100sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_toolbar"
+            >
+
+            <TextView
+                android:id="@+id/tv_itemCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Item Category"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_itemCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/tv_itemCategory">
+
+                <Spinner
+                    android:id="@+id/category_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:autofillHints="@string/password"
+                    android:spinnerMode="dropdown"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:entries="@array/items_bottom"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <!--   <TextView
+                android:id="@+id/tv_serviceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Type"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_itemCategory"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_serviceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/tv_serviceType">
+
+                <Spinner
+                    android:id="@+id/service_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:autofillHints="@string/password"
+                    android:spinnerMode="dropdown"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:entries="@array/items_bottom"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <TextView
+                android:id="@+id/tv_itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_itemCategory"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/tv_itemName">
+
+                <Spinner
+                    android:id="@+id/name_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:autofillHints="@string/password"
+                    android:spinnerMode="dropdown"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:entries="@array/items_bottom"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_setPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAR 20"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_itemName"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_setPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_setPrice">
+
+                <EditText
+                    android:id="@+id/et_add_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/background_edittext"
+                    android:paddingLeft="@dimen/_10sdp"
+
+                    android:hint="SAR 20"
+                    android:textColorHint="@color/colorCheckBox"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBlack"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_add_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:background="@drawable/background_button"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Add Item"
+                android:layout_marginTop="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_setPrice"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

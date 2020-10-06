@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ui.order_request_management.OrderManagementActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_order_management_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:background="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            android:text="Order Request Management"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+ <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_management_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

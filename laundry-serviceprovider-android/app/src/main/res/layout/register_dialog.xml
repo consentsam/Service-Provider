@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_300sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="@dimen/_16sdp"
+    android:background="@drawable/background_with_white_corner">
+    <ImageButton
+        android:id="@+id/register_dialog_ok_iv"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/popup_check_icon"
+        android:layout_marginTop="@dimen/_20sdp"/>
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/thanks_for_registrering"
+        android:textColor="@color/colorMain"
+        android:textSize="@dimen/_18sdp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_instructions"
+        android:textSize="@dimen/_18sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/time_for_verification" />
+    <Button
+        android:id="@+id/tv_okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/background_button_rect"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="OK"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_18sdp" />
+</LinearLayout>

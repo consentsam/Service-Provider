@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.service_mgmt.ServiceManagementActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_service_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:background="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            android:text="Service Management"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/cl_toolbar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_55sdp"
+        app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_service_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_serviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:text="Service Type"
+                    android:textColor="@color/colorMain"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_17sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_service_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_serviceTitle"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:itemCount="1"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:listitem="@layout/service_mgmt_list" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_service_type">
+
+
+                <TextView
+                    android:id="@+id/tv_delivery_Charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:text="Delivery Charges Criteria"
+                    android:textColor="@color/colorMain"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_17sdp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_freePaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_delivery_Charges"
+                    >
+                    <RadioButton
+                        android:id="@+id/rb_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:buttonTint="@color/blue"
+                       android:paddingLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:buttonTint="@color/blue"
+                        android:checked="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="Paid"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="According to Distance"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_paid"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:buttonTint="@color/blue"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                </RadioGroup>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_freePaid"
+
+                    >
+
+                    <CheckBox
+                        android:id="@+id/cb_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_14sdp"
+                        android:checked="true"
+                        android:buttonTint="@color/blue"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:text="Normal"
+
+                        />
+
+                    <CheckBox
+                        android:id="@+id/cb_express"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cb_normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:checked="true"
+                        android:buttonTint="@color/blue"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:text="Express" />
+
+                    <EditText
+                        android:id="@+id/et_normalDelCharges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Normal Delivery Charges"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cb_express" />
+
+                    <EditText
+                        android:id="@+id/et_numberDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Number of Days Required"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/et_normalDelCharges" />
+
+                    <EditText
+                        android:id="@+id/et_expressDelCharges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Express Delivery Charges"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/et_numberDays" />
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_paid"
+
+                    >
+
+                   <TextView
+                       android:id="@+id/tv_zero_four"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       android:textSize="@dimen/_14sdp"
+                       android:fontFamily="@font/roboto_medium"
+                       android:textColor="@color/colorBlack"
+                       android:text="0 - 4 KM"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       />
+
+                    <EditText
+                        android:id="@+id/et_zeroFourCharges"
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Delivery Charges"
+                        android:singleLine="true"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_fourEight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:text="4 - 8 KM"
+                        app:layout_constraintTop_toBottomOf="@+id/et_zeroFourCharges"
+                         android:layout_marginTop="@dimen/_20sdp"
+                        />
+
+
+
+                    <EditText
+                        android:id="@+id/et_fourEightCharges"
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Delivery Charges"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/et_zeroFourCharges" />
+
+
+                    <TextView
+                        android:id="@+id/tv_eightTwelveCharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/colorBlack"
+                        android:text="8 - 12 KM"
+                        app:layout_constraintTop_toBottomOf="@+id/et_fourEightCharges"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/et_eightTwelveCharges"
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/drawable_edittext"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/hint_color"
+                        android:hint="Enter Delivery Charges"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/et_fourEightCharges" />
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_order_Charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_distance"
+                    android:text="Order Charges"
+                    android:textColor="@color/colorMain"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_17sdp" />
+
+                <CheckBox
+                    android:id="@+id/cb_minimum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_Charges"
+                    android:textSize="@dimen/_14sdp"
+                    android:checked="true"
+                    android:buttonTint="@color/blue"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorBlack"
+                    android:text="Minimum"
+
+                    />
+
+                <CheckBox
+                    android:id="@+id/cb_maximum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_order_Charges"
+                    android:textSize="@dimen/_14sdp"
+                    android:buttonTint="@color/blue"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorBlack"
+                    android:text="Maximum" />
+
+
+                <EditText
+                    android:id="@+id/et_minimum_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/drawable_edittext"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:hint="Enter Minimum Order Charges"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_maximum" />
+
+                <EditText
+                    android:id="@+id/et_maximum_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/drawable_edittext"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColorHint="@color/hint_color"
+                    android:hint="Enter Maximum Order Charges"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_minimum_order" />
+
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@drawable/background_button"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Continue"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/et_maximum_order" />
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@drawable/background_button"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Edit"
+                    android:layout_marginTop="@dimen/_15sdp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/et_maximum_order" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

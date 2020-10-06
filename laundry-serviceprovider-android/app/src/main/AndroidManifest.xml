@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.serviceprivider">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.app.serviceprivider.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/CustomAppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.app.serviceprivider.activity.ui.task.TaskActivity"></activity>
+        <activity android:name="com.app.serviceprivider.activity.ui.order_request_management.OrderManagementActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.WorkUnderDevActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.service_mgmt.EditAddItemActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.service_mgmt.EditServiceMgmtActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.service_mgmt.AddItemActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.service_mgmt.ServiceDetailActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.service_mgmt.ServiceManagementActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.slot_collection.SlotCollectionActivity" />
+        <activity android:name="com.app.serviceprivider.activity.ui.coll_delivery_mgmt.CollDelMgmtActivity" />
+        <activity
+            android:name="com.app.serviceprivider.activity.ui.home.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/CustomAppTheme" />
+        <activity
+            android:name="com.app.serviceprivider.activity.profile.ProfileUploadDocumentActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.activity.profile.ProfileBankDetailActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.resetpassword.ResetPasswordActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.forgotpassword.ForgotPasswordActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.login.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="com.app.serviceprivider.ui.activity.home.HomeActivity" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.profile.ProfileCreateActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.otpverify.OtpVerifyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.register.RegisterActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="com.app.serviceprivider.ui.activity.SelectLanguageActivity" />
+        <activity android:name="com.app.serviceprivider.ui.activity.SelectThemeModeActivity" />
+
+
+        <service
+            android:name=".firebasenotification.MyFirebaseNotification"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+            Set custom default icon. This is used when no icon is set for incoming notification messages.
+            See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+            Set color used with incoming notification messages. This is used when no color is set for the incoming
+            notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/transparent" />
+
+
+
+
+        <activity
+            android:name="com.app.serviceprivider.ui.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.app.serviceprivider.base.BaseActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

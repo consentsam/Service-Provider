@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.ui.dashboard.OnlineDashboardFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:spanCount="2"
+            tools:itemCount="8"
+            tools:layout_editor_absoluteX="1dp"
+            tools:listitem="@layout/online_dashboard_list" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/background_button"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="@dimen/_16sdp"
+        android:textAllCaps="false"
+        android:text="View Order Request">
+
+    </Button>
+
+<!--
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="@dimen/_8sdp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="2"
+               android:orientation="horizontal">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="0dp"
+    android:layout_height="@dimen/_120sdp"
+    android:layout_weight="1"
+    android:layout_margin="@dimen/_5sdp"
+
+    app:cardCornerRadius="@dimen/_8sdp"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_with_brown_corner"
+           android:padding="@dimen/_12sdp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ongoing_order"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_alignParentRight="true"
+            android:text="425"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_14sdp"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:fontFamily="@font/roboto_medium"
+        android:layout_alignParentRight="true"
+        android:text="Ongoing Order"
+        android:padding="8dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12sdp"
+        />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/_120sdp"
+                   android:layout_weight="1"
+                   android:layout_margin="@dimen/_5sdp"
+
+                   app:cardCornerRadius="@dimen/_8sdp"
+                   android:padding="@dimen/_5sdp"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/_10sdp">
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/background_with_brown_corner"
+                               android:padding="@dimen/_12sdp"
+                               >
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+
+                                   android:src="@drawable/cancelled_orders"/>
+
+                           </LinearLayout>
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_centerInParent="true"
+                               android:fontFamily="@font/roboto_medium"
+                               android:layout_alignParentRight="true"
+                               android:text="425"
+                               android:textColor="@color/pink"
+                               android:textSize="@dimen/_14sdp"
+                               />
+
+                       </RelativeLayout>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+
+                           android:fontFamily="@font/roboto_medium"
+                           android:layout_alignParentRight="true"
+                           android:text="Cancelled Order"
+                           android:padding="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textSize="@dimen/_12sdp"
+                           />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="2"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/_120sdp"
+                   android:layout_weight="1"
+                   android:layout_margin="@dimen/_5sdp"
+
+                   app:cardCornerRadius="@dimen/_8sdp"
+                   android:padding="@dimen/_5sdp"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/_10sdp">
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/background_with_brown_corner"
+                               android:padding="@dimen/_12sdp"
+                               >
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+
+                                   android:src="@drawable/completed_orders"/>
+
+                           </LinearLayout>
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_centerInParent="true"
+                               android:fontFamily="@font/roboto_medium"
+                               android:layout_alignParentRight="true"
+                               android:text="425"
+                               android:textColor="@color/green"
+                               android:textSize="@dimen/_14sdp"
+                               />
+
+                       </RelativeLayout>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+
+                           android:fontFamily="@font/roboto_medium"
+                           android:layout_alignParentRight="true"
+                           android:text="Complete Order"
+                           android:padding="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textSize="@dimen/_12sdp"
+                           />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/_120sdp"
+                   android:layout_weight="1"
+                   android:layout_margin="@dimen/_5sdp"
+
+                   app:cardCornerRadius="@dimen/_8sdp"
+                   android:padding="@dimen/_5sdp"
+                   >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/_10sdp">
+
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/background_with_brown_corner"
+                               android:padding="@dimen/_12sdp">
+
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+
+                                   android:src="@drawable/most_booked_services" />
+
+                           </LinearLayout>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_alignParentRight="true"
+                               android:layout_centerInParent="true"
+                               android:fontFamily="@font/roboto_medium"
+                               android:text="425"
+                               android:textColor="@color/blue"
+                               android:textSize="@dimen/_14sdp" />
+
+                       </RelativeLayout>
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentRight="true"
+
+                           android:layout_centerInParent="true"
+                           android:fontFamily="@font/roboto_medium"
+                           android:padding="8dp"
+                           android:text="Most Booked Order"
+                           android:textColor="@color/colorBlack"
+                           android:textSize="@dimen/_12sdp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="2"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/_120sdp"
+                   android:layout_weight="1"
+                   android:layout_margin="@dimen/_5sdp"
+
+                   app:cardCornerRadius="@dimen/_8sdp"
+                   android:padding="@dimen/_5sdp"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/_10sdp">
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/background_with_brown_corner"
+                               android:padding="@dimen/_12sdp"
+                               >
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+
+                                   android:src="@drawable/total_revenue"/>
+
+                           </LinearLayout>
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_centerInParent="true"
+                               android:fontFamily="@font/roboto_medium"
+                               android:layout_alignParentRight="true"
+                               android:text="40K"
+                               android:textColor="@color/yellow"
+                               android:textSize="@dimen/_14sdp"
+                               />
+
+                       </RelativeLayout>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+
+                           android:fontFamily="@font/roboto_medium"
+                           android:layout_alignParentRight="true"
+                           android:text="Total Revenue Till Now"
+                           android:padding="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textSize="@dimen/_12sdp"
+                           />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/_120sdp"
+                   android:layout_weight="1"
+                   android:layout_margin="@dimen/_5sdp"
+
+                   app:cardCornerRadius="@dimen/_8sdp"
+                   android:padding="@dimen/_5sdp"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="@dimen/_10sdp">
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/background_with_brown_corner"
+                               android:padding="@dimen/_12sdp"
+                               >
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+
+                                   android:src="@drawable/rating"/>
+
+                           </LinearLayout>
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_centerInParent="true"
+                               android:fontFamily="@font/roboto_medium"
+                               android:layout_alignParentRight="true"
+                               android:text="4.8"
+                               android:textColor="@color/ratingcolor"
+                               android:textSize="@dimen/_14sdp"
+                               />
+
+                       </RelativeLayout>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+
+                           android:fontFamily="@font/roboto_medium"
+                           android:layout_alignParentRight="true"
+                           android:text="Total Rating Order"
+                           android:padding="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textSize="@dimen/_12sdp"
+                           />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+           <include
+               android:id="@+id/inc_btn_login"
+               layout="@layout/button_layout" />
+       </LinearLayout>
+   </ScrollView>
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
